@@ -16,8 +16,8 @@ import time
 # Config details for Azure SQL DB for VehicleInformation and LocationInformation tables
 #sqldbusername = dbutils.secrets.get(scope="KeyVaultScope",key="VehicleInformationDBUserId")
 #sqldbpwd=dbutils.secrets.get(scope="KeyVaultScope",key="VehicleInformationDBPwd")
-sqldbusername="dataadmin"
-sqldbpwd="admin@123"
+sqldbusername=
+sqldbpwd=
 jdbcHostname = "sql-server-adb-usecase.database.windows.net"
 jdbcDatabase = "sql-database"
 jdbcPort = 1433

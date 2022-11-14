@@ -9,17 +9,17 @@ from pyspark.sql.functions import to_json, struct
 from pyspark.sql import functions as F
 import random
 import time
-# First change
+# First line of code
+# Second line of code
 
 # COMMAND ----------
 
 # Config details for Azure SQL DB for VehicleInformation and LocationInformation tables
-#sqldbusername = dbutils.secrets.get(scope="KeyVaultScope",key="VehicleInformationDBUserId")
-#sqldbpwd=dbutils.secrets.get(scope="KeyVaultScope",key="VehicleInformationDBPwd")
-sqldbusername="dataadmin"
-sqldbpwd="admin@123"
-jdbcHostname = "sql-server-adb-usecase.database.windows.net"
-jdbcDatabase = "sql-database"
+sqldbusername = dbutils.secrets.get(scope="KeyVaultScope",key="VehicleInformationDBUserId")
+sqldbpwd=dbutils.secrets.get(scope="KeyVaultScope",key="VehicleInformationDBPwd")
+
+jdbcHostname = "vehicledemoinformatiosrvr.database.windows.net"
+jdbcDatabase = "VehicleInformationDB"
 jdbcPort = 1433
 jdbcUrl = "jdbc:sqlserver://{0}:{1};database={2};user={3};password={4}".format(jdbcHostname, jdbcPort, jdbcDatabase, sqldbusername, sqldbpwd)
 connectionProperties = {
@@ -51,15 +51,15 @@ display(df_locationInfo)
 
 # COMMAND ----------
 
-storageAccount="stdev8085"
+storageAccount="cookbookstoragegen2"
 mountpoint = "/mnt/SensorData"
 storageEndPoint ="abfss://sensordata@{}.dfs.core.windows.net/".format(storageAccount)
 print ('Mount Point ='+mountpoint)
 
 #ClientId, TenantId and Secret is for the Application(ADLSGen2App) was have created as part of this recipe
-clientID ="81f6d479-4da2-47cd-ae39-3690c03c1de6"
-tenantID ="26038e67-6fc0-4db3-9292-c9804fc51539"
-clientSecret ="LL.8Q~kPdp9hagY0JCKHAkG5NlFi5YtsrO4MSaTI"
+clientID ="dffsdfsdf4841-99e5-8dsfsdfsdfsdf161"
+tenantID ="dsfsdfsdfb-dfsdfsdfsdfsdf
+clientSecret ="dfsdfsdfsdfsdfsdfsdf4-a._1"
 oauth2Endpoint = "https://login.microsoftonline.com/{}/oauth2/token".format(tenantID)
 
 
